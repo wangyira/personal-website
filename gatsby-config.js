@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Stardos Stencil`, `Great Vibes`],
+        fonts: [`Stardos Stencil`, `Great Vibes`, `Arvo`],
         display: "swap",
       },
     },
