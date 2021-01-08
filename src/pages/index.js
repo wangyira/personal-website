@@ -24,7 +24,7 @@ const IndexPage = () => {
   return (
     <div className="container">
       <Header></Header>
-      <Img className="plane" fluid={data.plane.childImageSharp.fluid} />
+      {/* <Img className="plane" fluid={data.plane.childImageSharp.fluid} /> */}
       <Intro></Intro>
     </div>
   )

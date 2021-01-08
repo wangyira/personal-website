@@ -32,7 +32,11 @@ const Intro = () => {
           products that will help users. I have been growing both my programming
           skills and product senses through projects, clubs, and internships👩‍💻.
           I love to create and build products that create positive impact and
-          alleviate users’ pain points.{" "}
+          alleviate users’ pain points.
+          <br></br>
+          <br></br>
+          A little bit more about me, I was born and raised in Beijing, China🐼, and I moved to Richmond, Virginia✈️, alone to attend high school when I was 13. As a result, I have a deep understanding of both the Eastern and Western cultures as well as tech products and landscapes. I also adapt to new environments very quickly and can empathize with people’s feelings and needs well.
+
         </div>
       </div>
     </div>

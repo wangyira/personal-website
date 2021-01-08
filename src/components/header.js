@@ -1,8 +1,18 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import HoverImage from "react-hover-image";
 
+import githubImage from "../images/github.png"
+import githubHover from "../images/githubHover.png"
+import linkedinImage from "../images/linkedin.png"
+import linkedinHover from "../images/linkedinHover.png"
+import twitterImage from "../images/twitter.png"
+import twitterHover from "../images/twitterHover.png"
+import emailImage from "../images/email.png"
+import emailHover from "../images/emailHover.png"
+import Dragon from "../images/landing.jpg"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -13,31 +23,12 @@ const Header = () => {
           }
         }
       }
-      github: file(relativePath: { eq: "github.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      linkedin: file(relativePath: { eq: "linkedin.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      email: file(relativePath: { eq: "email.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
+
   return (
     <header>
+      {/* <div className="pink"></div> */}
       <div className="nav-bar">
         <div className="nav">About</div>
         <div className="nav">Project</div>
@@ -45,22 +36,29 @@ const Header = () => {
       </div>
       <div className="firstname">Amanda</div>
       <div className="lastname">Wang</div>
-      <div className="landing">
-        <Img fluid={data.landing.childImageSharp.fluid} />
-      </div>
-      <div className="row">
+      <img className='dragon' src={Dragon} alt="landing image"/>
+        
+      <div className="contact">
         <Link to="https://github.com/wangyira" target="_blank">
-          <Img className="icon" fluid={data.github.childImageSharp.fluid} />
+          <HoverImage className="icon" src={githubImage} hoverSrc={githubHover} />
         </Link>
         <Link to="https://www.linkedin.com/in/amandawang14/" target="_blank">
-          <Img className="icon" fluid={data.linkedin.childImageSharp.fluid} />
+          <HoverImage className="icon" src={linkedinImage} hoverSrc={linkedinHover} />
+        </Link>
+        <Link to="https://twitter.com/amandayiranwang" target="_blank">
+          <HoverImage className="icon twitter" src={twitterImage} hoverSrc={twitterHover} />
         </Link>
         <a href="mailto:wangyira@usc.edu" target="_blank">
-          <Img className="icon" fluid={data.email.childImageSharp.fluid} />
+          <HoverImage className="icon" src={emailImage} hoverSrc={emailHover} />
         </a>
-      </div>
+        
+        <div className="line"></div>
+      </div> 
       <div className="summary">
+        <div className="emoji">👩‍💻📊👥🇨🇳🐼</div>
+        <br></br>
         <p>Computer Science @USC 22</p>
+        <br></br>
         <p>Previously:</p>
         <p>- Software Engineer & </p>
         <p>&nbsp; Program Manager @Microsoft Azure</p>
