@@ -1,6 +1,4 @@
-import { Link } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import HoverImage from "react-hover-image";
 
 import githubImage from "../images/github.png"
@@ -13,17 +11,17 @@ import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      landing: file(relativePath: { eq: "landing.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     landing: file(relativePath: { eq: "landing.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <header>

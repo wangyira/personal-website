@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 //import component
 import Header from "../components/header.js"
 import Intro from "../components/intro.js"
+import Project from "../components/project.js"
 
 const IndexPage = () => {
   // const data = useStaticQuery(graphql`
@@ -26,6 +27,7 @@ const IndexPage = () => {
       <Header></Header>
       {/* <Img className="plane" fluid={data.plane.childImageSharp.fluid} /> */}
       <Intro></Intro>
+      <Project></Project>
     </div>
   )
 }
