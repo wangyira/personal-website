@@ -9,17 +9,17 @@ import Header from "../components/header.js"
 import Intro from "../components/intro.js"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      plane: file(relativePath: { eq: "plane.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     plane: file(relativePath: { eq: "plane.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <div className="container">

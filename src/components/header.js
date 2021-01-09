@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
-import React, { useState} from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import HoverImage from "react-hover-image";
 
 import githubImage from "../images/github.png"
@@ -37,17 +36,17 @@ const Header = () => {
       <div className="firstname">Amanda</div>
       <div className="lastname">Wang</div>
       <img className='dragon' src={Dragon} alt="landing image"/>
-        
+
       <div className="contact">
-        <Link to="https://github.com/wangyira" target="_blank">
+        <a href="https://github.com/wangyira" target="_blank"> 
           <HoverImage className="icon" src={githubImage} hoverSrc={githubHover} />
-        </Link>
-        <Link to="https://www.linkedin.com/in/amandawang14/" target="_blank">
+        </a> 
+        <a href="https://www.linkedin.com/in/amandawang14/" target="_blank">
           <HoverImage className="icon" src={linkedinImage} hoverSrc={linkedinHover} />
-        </Link>
-        <Link to="https://twitter.com/amandayiranwang" target="_blank">
+        </a>
+        <a href="https://twitter.com/amandayiranwang" target="_blank">
           <HoverImage className="icon twitter" src={twitterImage} hoverSrc={twitterHover} />
-        </Link>
+        </a>
         <a href="mailto:wangyira@usc.edu" target="_blank">
           <HoverImage className="icon" src={emailImage} hoverSrc={emailHover} />
         </a>
