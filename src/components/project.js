@@ -169,6 +169,10 @@ const Project = () => {
                         </div>
                     </div>
                 )}
+
+                <div className="column"></div>
+                <div className="column"></div>
+
             </div>
             <div className="clearFloat"></div>
         </div>
