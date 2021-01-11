@@ -10,24 +10,17 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
-const Header = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     landing: file(relativePath: { eq: "landing.jpg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 300) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
+const Header = () => {
+
+  const clicking=()=>{
+    console.log("this is working")
+  }
   return (
-    <header>
+    <div className="header">
       {/* <div className="pink"></div> */}
       <div className="nav-bar">
-        <div className="nav">About</div>
+        <div className="nav" onClick={clicking}>About</div>
         <div className="nav">Project</div>
         <div className="nav">Resume</div>
       </div>
@@ -61,7 +54,7 @@ const Header = () => {
         <p>&nbsp; Program Manager @Microsoft Azure</p>
         <p>- Quant @Founder’s Securities</p>
       </div>
-    </header>
+    </div>
   )
 }
 
