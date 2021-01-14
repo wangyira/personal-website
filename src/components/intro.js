@@ -46,6 +46,8 @@ const Intro = () => {
           quickly and can empathize with people’s feelings and needs well.
         </div>
       </div>
+      <div className="cream"></div>
+      <div className="brownCircle"></div>
     </div>
   )
 }

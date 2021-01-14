@@ -53,14 +53,19 @@ const Project = () => {
     return (
         <div id="project">
             <div className="projectHeader">
-                <div className="navButton" onClick={clickedAll}>ALL</div>
-                <div className="navButton" onClick={clickedTech}>TECH</div>
-                <div className="navButton" onClick={clickedStrategy}>STRATEGY</div>
-                <div className="navButton" onClick={clickedLeadership}>LEADERSHIP</div>
+                <div className="navButton " onClick={clickedAll} style={(!all) ? null : { width: "90px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>ALL</div>
+                <div className="navButton" onClick={clickedTech} style={(!tech) ? null : { width: "120px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>TECH</div>
+                <div className="navButton" onClick={clickedStrategy} style={(!strategy) ? null : { width: "180px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>STRATEGY</div>
+                <div className="navButton" onClick={clickedLeadership} style={(!leadership) ? null : { width: "220px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>LEADERSHIP</div>
             </div>
-
+            {(all || strategy) && (
+                <>
+                <div className="lbrown"></div>
+                <div className="purpleCircle"></div>
+                </>
+            )}
             <div className="block">
-                {(all || strategy) && (
+                {(all || strategy || leadership) && (
                     <div className="column left">
                         <img className="project-img" src={Hive} alt="Hive Image"></img>
                         <div className="cream-box">
@@ -99,6 +104,8 @@ const Project = () => {
                         </div>
                     </div>
                 )}
+
+               
 
                 {(all || strategy) && (
                     <div className="column left">

@@ -15,7 +15,8 @@ const Header = () => {
 
   return (
     <div className="header">
-      {/* <div className="pink"></div> */}
+      <div className="pink"></div>
+      <div className="creamCircle"></div>
       
       <div className="firstname">Amanda</div>
       <div className="lastname">Wang</div>
@@ -47,6 +48,9 @@ const Header = () => {
         <p>&nbsp; Program Manager @Microsoft Azure</p>
         <p>- Quant @Founder’s Securities</p>
       </div>
+
+      <div className="orange"></div>
+      <div className="brownCircle"></div>
     </div>
   )
 }
