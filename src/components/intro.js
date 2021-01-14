@@ -14,7 +14,7 @@ const Intro = () => {
   //   }
   // `)
   return (
-    <div className="intro">
+    <div id="intro">
       <div className="left-col">
         <img className='headshot' src={Headshot} alt="My headshot"/>
         

@@ -13,17 +13,10 @@ import Dragon from "../images/landing.jpg"
 
 const Header = () => {
 
-  const clicking=()=>{
-    console.log("this is working")
-  }
   return (
     <div className="header">
       {/* <div className="pink"></div> */}
-      <div className="nav-bar">
-        <div className="nav" onClick={clicking}>About</div>
-        <div className="nav">Project</div>
-        <div className="nav">Resume</div>
-      </div>
+      
       <div className="firstname">Amanda</div>
       <div className="lastname">Wang</div>
       <img className='dragon' src={Dragon} alt="landing image"/>

@@ -51,7 +51,7 @@ const Project = () => {
     }
 
     return (
-        <div className="project">
+        <div id="project">
             <div className="projectHeader">
                 <div className="navButton" onClick={clickedAll}>ALL</div>
                 <div className="navButton" onClick={clickedTech}>TECH</div>
@@ -174,7 +174,12 @@ const Project = () => {
                 <div className="column"></div>
 
             </div>
-            <div className="clearFloat"></div>
+            
+            <div className="contact">
+           
+                Get in touch👋 HMU on Twitter or shoot me an email👉
+            </div>
+            <div className="brownShadow"></div>
         </div>
         
     )
