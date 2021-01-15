@@ -141,7 +141,7 @@ const Project = () => {
                     <div className="column" data-aos="fade-up">
                         <img className="project-img" src={StreamBuddies} alt="StreamBuddies Image"></img>
                         <div className="cream-box">
-                            <div className="title">STREAMBUDDIES - BUSINESS Plan</div>
+                            <div className="title">STREAMBUDDIES - BUSINESS PLAN</div>
                             <div className="description">Design prototype and devise business pitch to allow people to watch their favorites together </div>
                         </div>
                     </div>
