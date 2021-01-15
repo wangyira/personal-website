@@ -10,6 +10,9 @@ const IndexPage = () => {
 
   return (
       <div className="container">
+          {/* <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> */}
+          {/* <script src="bower_components/aos/dist/aos.js"></script> */}
+
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init();

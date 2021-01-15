@@ -1,10 +1,10 @@
 import React from "react"
 import Headshot from "../images/headshot.png"
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; 
 
 const Intro = () => {
-  AOS.init({duration: 1200,once: false, });
+  // AOS.init({duration: 1200,once: false, });
   return (
     <div id="intro">
       <div className="left-col" data-aos="fade-right">

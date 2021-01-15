@@ -4,9 +4,7 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "homepage": "http://wangyira.github.io/personal-website/", 
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
     "gatsby": "^2.24.26",
     "gatsby-image": "^2.4.14",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -42,8 +40,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "predeploy": "gatsby build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
