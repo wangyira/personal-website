@@ -10,17 +10,19 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const Header = () => {
-
+  AOS.init({duration: 1200,});
   return (
     <div className="header">
       <div className="pink"></div>
       <div className="creamCircle"></div>
       
-      <div className="firstname">Amanda</div>
-      <div className="lastname">Wang</div>
-      <img className='dragon' src={Dragon} alt="landing image"/>
+      <div className="firstname" data-aos="zoom-in">Amanda</div>
+      <div className="lastname" data-aos="zoom-in">Wang</div>
+      <img className='dragon' src={Dragon} alt="landing image" data-aos="fade-left"/>
 
       <div className="contact">
         <a href="https://github.com/wangyira" target="_blank"> 
@@ -39,7 +41,7 @@ const Header = () => {
         <div className="line"></div>
       </div> 
       <div className="summary">
-        <div className="emoji">👩‍💻📊👥🇨🇳🐼</div>
+        {/* <div className="emoji">👩‍💻📊👥🇨🇳🐼</div> */}
         <br></br>
         <p>Computer Science @USC 22</p>
         <br></br>

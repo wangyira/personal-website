@@ -1,12 +1,16 @@
 import React, {useState} from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 import Hive from "../images/hive.png"
 import Aquapod from "../images/aquapod.png"
 import Microsoft from "../images/microsoft.png"
 import Nomi from "../images/nomi.png"
+import Cp from "../images/cp.png"
 import Adobe from "../images/adobe.png"
 import StreamBuddies from "../images/streambuddies.png"
 import MusicParty from "../images/musicparty.png"
+import ShoppingCart from "../images/shoppingcart.png"
 import SWE from "../images/swe.png"
 import FounderSecurities from "../images/foundersecurities.png"
 import Momentum from "../images/momentum.png"
@@ -50,9 +54,15 @@ const Project = () => {
         setStrategy(false)
     }
 
+    AOS.init({
+        duration: 800,
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+    });
+
     return (
         <div id="project">
-            <div className="projectHeader">
+            <div className="projectHeader" id="anchorTest">
                 <div className="navButton " onClick={clickedAll} style={(!all) ? null : { width: "90px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>ALL</div>
                 <div className="navButton" onClick={clickedTech} style={(!tech) ? null : { width: "120px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>TECH</div>
                 <div className="navButton" onClick={clickedStrategy} style={(!strategy) ? null : { width: "180px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>STRATEGY</div>
@@ -66,41 +76,51 @@ const Project = () => {
             )}
             <div className="block">
                 {(all || strategy || leadership) && (
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
                         <img className="project-img" src={Hive} alt="Hive Image"></img>
                         <div className="cream-box">
                             <div className="title">HIVE - CONSULTANT TEAM LEAD</div>
-                            <div className="description">Identify computer vision use cases and conduct 10+ competitor analysis</div>
+                            <div className="description">Identify computer vision use cases and conduct 10+ competitor analysis, report to the President</div>
+                        </div>
+                    </div>
+                )}
+
+                { (all || tech )&& (
+                    <div className="column" data-aos="fade-up"  data-aos-anchor="#anchorTest">
+                        <img className="project-img" src={Cp} alt="Cp Image" ></img>
+                        <div className="cream-box">
+                            <div className="title">CS170 Discrete Methods - COURSE PRODUCER</div>
+                            <div className="description">Hold weekly office hours for 30+ students to explain difficult concepts and grade exams</div>
                         </div>
                     </div>
                 )}
 
                 {(all || strategy) && (
-                    <div className="column right">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={Aquapod} alt="Aquapod Image"></img>
                         <div className="cream-box">
                             <div className="title">AQUAPOD - BUSINESS PROJECT</div>
-                            <div className="description">Derive business plan for self-driving boats to improve sustainability</div>
+                            <div className="description">Derive business plan and prototype for self-driving boats to improve sustainability</div>
                         </div>
                     </div>
                 )}
             
                 { (all || tech )&& (
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={Microsoft} alt="Microsoft Image"></img>
                         <div className="cream-box">
                             <div className="title">MICROSOFT AZURE - EXPLORE INTERN</div>
-                            <div className="description">Rasperry Pi demo for open-source project Krustlet (Kubernetes & WASM)</div>
+                            <div className="description">Develop Rasperry Pi demo for open-source project Krustlet (Kubernetes & WASM)</div>
                         </div>
                     </div>
                 )}
 
                 { (all || tech || strategy)&& (
-                    <div className="column right">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={Nomi} alt="Nomi Image"></img>
                         <div className="cream-box">
                             <div className="title">NOMI - PM & DEVELOPER</div>
-                            <div className="description">Digital menu software start-up that help customers to dine confidently</div>
+                            <div className="description">Build digital menu software start-up that help customers to dine confidently</div>
                         </div>
                     </div>
                 )}
@@ -108,7 +128,7 @@ const Project = () => {
                
 
                 {(all || strategy) && (
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={Adobe} alt="Adobe Image"></img>
                         <div className="cream-box">
                             <div className="title">ADOBE - CONSULTANT</div>
@@ -118,27 +138,37 @@ const Project = () => {
                 )}
 
                 {(all || strategy) && (
-                    <div className="column right">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={StreamBuddies} alt="StreamBuddies Image"></img>
                         <div className="cream-box">
                             <div className="title">STREAMBUDDIES - BUSINESS Plan</div>
-                            <div className="description">Design prototype and devise business pitch to watch people’s favorites together </div>
+                            <div className="description">Design prototype and devise business pitch to allow people to watch their favorites together </div>
                         </div>
                     </div>
                 )}
 
                 { (all || tech )&& (
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={MusicParty} alt="MusicParty Image"></img>
                         <div className="cream-box">
                             <div className="title">MUSIC PARTY - GROUP CODING PROJECT</div>
-                            <div className="description">Users can add, upvote, and listen to their favorite songs</div>
+                            <div className="description">Find songs that everyone love in a group hangout by adding and upvoting songs</div>
+                        </div>
+                    </div>
+                )}
+
+                { (all || tech )&& (
+                    <div className="column" data-aos="fade-up">
+                        <img className="project-img" src={ShoppingCart} alt="ShoppingCart Image"></img>
+                        <div className="cream-box">
+                            <div className="title">SHOPPING CART - SOLO CODING PROJECT</div>
+                            <div className="description">Recipe-based web app that allow users to add and remove ingredients to the shopping cart</div>
                         </div>
                     </div>
                 )}
 
                 { (all || leadership )&& (
-                    <div className="column right">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={SWE} alt="SWE Image"></img>
                         <div className="cream-box">
                             <div className="title">SWE - Community Outreach Officer</div>
@@ -148,17 +178,17 @@ const Project = () => {
                 )}
 
                 { (all || tech )&& (    
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={FounderSecurities} alt="FounderSecurities Image"></img>
                         <div className="cream-box">
                             <div className="title">FOUNDER SECURITIES - QUANT INTERN</div>
-                            <div className="description">Find patterns in published data and develop trading algorithms</div>
+                            <div className="description">Analyze patterns in published government data, develop, and test trading algorithms</div>
                         </div>
                     </div>
                 )}
 
                 { (all || strategy )&& (
-                    <div className="column right">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={Momentum} alt="Momentum Image"></img>
                         <div className="cream-box">
                             <div className="title">MOMENTUM - CONSULTANT</div>
@@ -168,11 +198,11 @@ const Project = () => {
                 )}
 
                 { (all || leadership )&& (
-                    <div className="column left">
+                    <div className="column" data-aos="fade-up">
                         <img className="project-img" src={ThetaTau} alt="ThetaTau Image"></img>
                         <div className="cream-box">
                             <div className="title">Theta Tau - Executive board</div>
-                            <div className="description">Raised $11,000 for BLM, communicate with 60 current & 130 potential members</div>
+                            <div className="description">Raised $11,000 for BLM, correspond with 60 current & 130 potential members</div>
                         </div>
                     </div>
                 )}
@@ -185,6 +215,7 @@ const Project = () => {
             <div className="contact">
            
                 Get in touch👋 HMU on Twitter or shoot me an email👉
+                <div className="copyright">Amanda Wang &copy; 2021</div>
             </div>
             <div className="brownShadow"></div>
         </div>
