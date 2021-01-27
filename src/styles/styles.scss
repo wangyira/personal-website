@@ -8,6 +8,7 @@
     top: 32px;
     color: #735751;
     z-index: 5;
+    cursor: pointer;
     .nav {
       font-family: "Arvo";
       font-weight: bold;
@@ -245,6 +246,7 @@
         line-height: 60px;
         z-index: 10;
         text-align: center;
+        cursor: pointer;
       }
       // .allSelected {
       //   width: 90px;

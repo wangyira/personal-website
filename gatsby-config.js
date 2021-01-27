@@ -6,6 +6,14 @@ module.exports = {
   },
   pathPrefix: "/personal-website",
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "2266453369",
+        head: true,
+        anonymize: true,
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

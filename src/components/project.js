@@ -171,7 +171,7 @@ const Project = () => {
                     <div className="column" data-aos="fade-up">
                         <img className="project-img" src={SWE} alt="SWE Image"></img>
                         <div className="cream-box">
-                            <div className="title">SWE - Community Outreach Officer</div>
+                            <div className="title">SWE - COMMUNITY OUTREACH OFFICER</div>
                             <div className="description">Host events to introduce highschoolers to STEM and fundraise $2,000 for shelters </div>
                         </div>
                     </div>
@@ -201,7 +201,7 @@ const Project = () => {
                     <div className="column" data-aos="fade-up">
                         <img className="project-img" src={ThetaTau} alt="ThetaTau Image"></img>
                         <div className="cream-box">
-                            <div className="title">Theta Tau - Executive board</div>
+                            <div className="title">THETA TAU - SCRIBE, EXECUTIVE BOARD</div>
                             <div className="description">Raised $11,000 for BLM, correspond with 60 current & 130 potential members</div>
                         </div>
                     </div>
