@@ -10,22 +10,11 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
-// import AOS from 'aos';
+
+import {trackCustomEvent, OutboundLink} from 'gatsby-plugin-google-analytics'
 import 'aos/dist/aos.css'; 
 
 const Header = () => {
-  // AOS.init({duration: 1200,});
-
-  // componentDidMount() {
-  //     const AOS = require('aos');
-  //     this.aos = AOS
-  //     this.aos.init()
-  // }
-
-  // componentDidUpdate() {
-  //     this.aos.refresh()
-  // }
-
   let AOS;
 
   useEffect(() => {
@@ -57,18 +46,18 @@ const Header = () => {
       <img className='dragon' src={Dragon} alt="landing image" data-aos="fade-left"/>
 
       <div className="contact">
-        <a href="https://github.com/wangyira" target="_blank"> 
+        <OutboundLink href="https://github.com/wangyira" target="_blank"> 
           <HoverImage className="icon" src={githubImage} hoverSrc={githubHover} />
-        </a> 
-        <a href="https://www.linkedin.com/in/amandawang14/" target="_blank">
+        </OutboundLink> 
+        <OutboundLink href="https://www.linkedin.com/in/amandawang14/" target="_blank">
           <HoverImage className="icon" src={linkedinImage} hoverSrc={linkedinHover} />
-        </a>
-        <a href="https://twitter.com/amandayiranwang" target="_blank">
+        </OutboundLink>
+        <OutboundLink href="https://twitter.com/amandayiranwang" target="_blank">
           <HoverImage className="icon twitter" src={twitterImage} hoverSrc={twitterHover} />
-        </a>
-        <a href="mailto:wangyira@usc.edu" target="_blank">
+        </OutboundLink>
+        <OutboundLink href="mailto:wangyira@usc.edu" target="_blank">
           <HoverImage className="icon" src={emailImage} hoverSrc={emailHover} />
-        </a>
+        </OutboundLink>
         
         <div className="line"></div>
       </div> 

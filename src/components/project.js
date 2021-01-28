@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-// import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 import Hive from "../images/hive.png"
@@ -15,6 +14,7 @@ import SWE from "../images/swe.png"
 import FounderSecurities from "../images/foundersecurities.png"
 import Momentum from "../images/momentum.png"
 import ThetaTau from "../images/tt.png"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 
 const Project = () => {
     const [all, setAll] = useState(true);
@@ -22,20 +22,32 @@ const Project = () => {
     const [strategy, setStrategy] = useState(false);
     const [leadership, setLeadership] = useState(false);
 
-    const clickedAll=()=>{
+    const clickedAll=(e)=>{
         console.log("all clicked")
         setAll(true)
         setTech(false)
         setStrategy(false)
         setLeadership(false)
+        e.preventDefault()
+        trackCustomEvent({
+            category:"All Button",
+            action:"Click",
+            label:"all button clicked"
+        })
     }
 
-    const clickedTech=()=>{
+    const clickedTech=(e)=>{
         console.log("project clicked")
         setTech(true)
         setAll(false)
         setStrategy(false)
         setLeadership(false)
+        e.preventDefault()
+        trackCustomEvent({
+            category:"Tech Button",
+            action:"Click",
+            label:"tech button clicked"
+        })
     }
 
     const clickedStrategy=()=>{
@@ -44,6 +56,12 @@ const Project = () => {
         setAll(false)
         setTech(false)
         setLeadership(false)
+        e.preventDefault()
+        trackCustomEvent({
+            category:"Strategy Button",
+            action:"Click",
+            label:"strategy button clicked"
+        })
     }
 
     const clickedLeadership=()=>{
@@ -52,6 +70,11 @@ const Project = () => {
         setAll(false)
         setTech(false)
         setStrategy(false)
+        trackCustomEvent({
+            category:"Leadership Button",
+            action:"Click",
+            label:"leadership button clicked"
+        })
     }
 
     let AOS;
@@ -227,7 +250,6 @@ const Project = () => {
             </div>
             
             <div className="contact">
-           
                 Get in touch👋 HMU on Twitter or shoot me an email👉
                 <div className="copyright">Amanda Wang &copy; 2021</div>
             </div>

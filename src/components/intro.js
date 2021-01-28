@@ -1,10 +1,9 @@
 import React, {useEffect} from "react"
 import Headshot from "../images/headshot.png"
-import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import {OutboundLink} from "gatsby-plugin-google-analytics";
 
 const Intro = () => {
-  // AOS.init({duration: 1200,once: false, });
   let AOS;
 
   useEffect(() => {
@@ -31,10 +30,10 @@ const Intro = () => {
         <img className='headshot' src={Headshot} alt="My headshot"/>
         
         <div className="resumeGroup">
-          <a href="https://drive.google.com/file/d/1Cz8-nY8QvpYatOsHiqr1WYCrmjOgrLxC/view?usp=sharing" target="_blank">
+          <OutboundLink href="https://drive.google.com/file/d/1Cz8-nY8QvpYatOsHiqr1WYCrmjOgrLxC/view?usp=sharing" target="_blank">
             <div className="word">Resume</div>
             <div className="emptyBox"></div>
-          </a>
+          </OutboundLink>
         </div>
 
       </div>
