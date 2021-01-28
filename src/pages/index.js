@@ -19,10 +19,10 @@ const IndexPage = () => {
           {/* <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> */}
           {/* <script src="bower_components/aos/dist/aos.js"></script> */}
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        {/* <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init();
-        </script>
+        </script> */}
         <div className="nav-bar">
           <Link to="intro" spy={true} smooth={true} duration={400}><div className="nav">About</div></Link> 
           <Link to="project" spy={true} smooth={true} duration={600}><div className="nav">Project</div></Link>

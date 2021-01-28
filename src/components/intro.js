@@ -1,10 +1,30 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Headshot from "../images/headshot.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 const Intro = () => {
-  AOS.init({duration: 1200,once: false, });
+  // AOS.init({duration: 1200,once: false, });
+  let AOS;
+
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      duration: 1200,
+      once: false, 
+    });
+  }, []);
+
+  useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
   return (
     <div id="intro">
       <div className="left-col" data-aos="fade-right">

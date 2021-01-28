@@ -1,5 +1,5 @@
-import React, {useState} from "react"
-import AOS from 'aos';
+import React, {useState, useEffect} from "react"
+// import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 import Hive from "../images/hive.png"
@@ -54,10 +54,24 @@ const Project = () => {
         setStrategy(false)
     }
 
-    AOS.init({
-        duration: 800,
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
+    let AOS;
+
+    useEffect(() => {
+        /**
+         * Server-side rendering does not provide the 'document' object
+         * therefore this import is required either in useEffect or componentDidMount as they
+         * are exclusively executed on a client
+         */
+        const AOS = require("aos");
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
+    useEffect(() => {
+        if (AOS) {
+            AOS.refresh();
+        }
     });
 
     return (

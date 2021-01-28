@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import HoverImage from "react-hover-image";
 
 import githubImage from "../images/github.png"
@@ -10,11 +10,43 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
-import AOS from 'aos';
+// import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 const Header = () => {
   // AOS.init({duration: 1200,});
+
+  // componentDidMount() {
+  //     const AOS = require('aos');
+  //     this.aos = AOS
+  //     this.aos.init()
+  // }
+
+  // componentDidUpdate() {
+  //     this.aos.refresh()
+  // }
+
+  let AOS;
+
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      duration: 1200,
+      once: false, 
+    });
+  }, []);
+
+  useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
+
   return (
     <div className="header">
       <div className="pink"></div>
