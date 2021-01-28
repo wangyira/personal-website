@@ -1,13 +1,19 @@
-import React from "react"
+import React, {useEffect} from "react"
 import "../styles/styles.scss"
 
 import Header from "../components/header.js"
 import Intro from "../components/intro.js"
 import Project from "../components/project.js"
 import {Link} from 'react-scroll'
+import ReactGa from 'react-ga'
 
 const IndexPage = () => {
 
+  useEffect(()=>{
+    ReactGa.initialize('UA-188326269-1')
+
+    ReactGa.pageview(window.location.pathname + window.location.search)
+  }, [])
   return (
       <div className="container">
           {/* <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> */}
