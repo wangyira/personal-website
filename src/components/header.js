@@ -10,8 +10,8 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const Header = () => {
   // AOS.init({duration: 1200,});

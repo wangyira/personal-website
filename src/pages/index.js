@@ -9,11 +9,11 @@ import ReactGa from 'react-ga'
 
 const IndexPage = () => {
 
-  useEffect(()=>{
-    ReactGa.initialize('UA-188326269-1')
+  // useEffect(()=>{
+  //   ReactGa.initialize('UA-188326269-1')
 
-    ReactGa.pageview(window.location.pathname + window.location.search)
-  }, [])
+  //   ReactGa.pageview(window.location.pathname + window.location.search)
+  // }, [])
   return (
       <div className="container">
           {/* <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> */}

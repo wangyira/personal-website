@@ -1,6 +1,6 @@
 import React, {useState} from "react"
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 import Hive from "../images/hive.png"
 import Aquapod from "../images/aquapod.png"
@@ -54,11 +54,11 @@ const Project = () => {
         setStrategy(false)
     }
 
-    // AOS.init({
-    //     duration: 800,
-    //     once: false, // whether animation should happen only once - while scrolling down
-    //     mirror: false, // whether elements should animate out while scrolling past them
-    // });
+    AOS.init({
+        duration: 800,
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+    });
 
     return (
         <div id="project">
