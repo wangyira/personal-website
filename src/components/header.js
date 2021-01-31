@@ -10,8 +10,9 @@ import twitterHover from "../images/twitterHover.png"
 import emailImage from "../images/email.png"
 import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
+import PinkCreamCircles from "../images/pinkCream.png"
 
-import {trackCustomEvent, OutboundLink} from 'gatsby-plugin-google-analytics'
+import {OutboundLink} from 'gatsby-plugin-google-analytics'
 import 'aos/dist/aos.css'; 
 
 const Header = () => {
@@ -38,8 +39,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div className="pink"></div>
-      <div className="creamCircle"></div>
+      <img className="pink" src={PinkCreamCircles} alt="pink cream circles"/>
       
       <div className="firstname" data-aos="zoom-in">Amanda</div>
       <div className="lastname" data-aos="zoom-in">Wang</div>
@@ -61,6 +61,7 @@ const Header = () => {
         
         <div className="line"></div>
       </div> 
+      
       <div className="summary">
         {/* <div className="emoji">👩‍💻📊👥🇨🇳🐼</div> */}
         <br></br>

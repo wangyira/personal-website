@@ -2,6 +2,7 @@ import React, {useEffect} from "react"
 import Headshot from "../images/headshot.png"
 import 'aos/dist/aos.css'; 
 import {OutboundLink} from "gatsby-plugin-google-analytics";
+import CreamBrownCircles from "../images/creamBrown.png"
 
 const Intro = () => {
   let AOS;
@@ -48,8 +49,8 @@ const Intro = () => {
           Since then, I have been working at a start-up founded by USC alums👥, I have consulted for Series B AI company, contributed to open-source development, developed algorithms to trade stocks📊, TAed for a class, and worked on other coding and business projects. I also led clubs to fundraise money for #BLM and to buy engineering toy sets for underpriveldged kids. See below for more information⬇️.  
           </div>
       </div>
-      <div className="cream"></div>
-      <div className="brownCircle"></div>
+
+      <img className="cream" src={CreamBrownCircles} alt="Cream Brown Circles"/>
     </div>
   )
 }
