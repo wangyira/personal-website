@@ -15,7 +15,7 @@ const IndexPage = () => {
         <div className="nav-bar">
           <Link to="intro" spy={true} smooth={true} duration={400}><div className="nav">About</div></Link> 
           <Link to="project" spy={true} smooth={true} duration={600}><div className="nav">Project</div></Link>
-          <OutboundLink href="https://drive.google.com/file/d/1Cz8-nY8QvpYatOsHiqr1WYCrmjOgrLxC/view?usp=sharing" target="_blank">
+          <OutboundLink href="https://drive.google.com/file/d/1GA_4tTmI8c2XEeQlvSu0CmI3ucMmv0DT/view?usp=sharing" target="_blank">
             <div className="nav">Resume</div>
           </OutboundLink>
         </div>

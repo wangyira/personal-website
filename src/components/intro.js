@@ -31,7 +31,7 @@ const Intro = () => {
         <img className='headshot' src={Headshot} alt="My headshot"/>
         
         <div className="resumeGroup">
-          <OutboundLink href="https://drive.google.com/file/d/1Cz8-nY8QvpYatOsHiqr1WYCrmjOgrLxC/view?usp=sharing" target="_blank">
+          <OutboundLink href="https://drive.google.com/file/d/1GA_4tTmI8c2XEeQlvSu0CmI3ucMmv0DT/view?usp=sharing" target="_blank">
             <div className="word">Resume</div>
             <div className="emptyBox"></div>
           </OutboundLink>
