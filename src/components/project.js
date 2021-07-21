@@ -1,6 +1,9 @@
-import React, {useState, useEffect} from "react"
-import 'aos/dist/aos.css'; 
+import React, { useState, useEffect } from "react"
+import 'aos/dist/aos.css';
 
+import Aks from "../images/aks.png"
+import Asset from "../images/asset.png"
+import KeepFit from "../images/keepfit.png"
 import Hive from "../images/hive.png"
 import Aquapod from "../images/aquapod.png"
 import Microsoft from "../images/microsoft.png"
@@ -22,7 +25,7 @@ const Project = () => {
     const [strategy, setStrategy] = useState(false);
     const [leadership, setLeadership] = useState(false);
 
-    const clickedAll=(e)=>{
+    const clickedAll = (e) => {
         console.log("all clicked")
         setAll(true)
         setTech(false)
@@ -30,13 +33,13 @@ const Project = () => {
         setLeadership(false)
         e.preventDefault()
         trackCustomEvent({
-            category:"All Button",
-            action:"Click",
-            label:"all button clicked"
+            category: "All Button",
+            action: "Click",
+            label: "all button clicked"
         })
     }
 
-    const clickedTech=(e)=>{
+    const clickedTech = (e) => {
         console.log("project clicked")
         setTech(true)
         setAll(false)
@@ -44,13 +47,13 @@ const Project = () => {
         setLeadership(false)
         e.preventDefault()
         trackCustomEvent({
-            category:"Tech Button",
-            action:"Click",
-            label:"tech button clicked"
+            category: "Tech Button",
+            action: "Click",
+            label: "tech button clicked"
         })
     }
 
-    const clickedStrategy=(e)=>{
+    const clickedStrategy = (e) => {
         console.log("strategy clicked")
         setStrategy(true)
         setAll(false)
@@ -58,22 +61,22 @@ const Project = () => {
         setLeadership(false)
         e.preventDefault()
         trackCustomEvent({
-            category:"Strategy Button",
-            action:"Click",
-            label:"strategy button clicked"
+            category: "Strategy Button",
+            action: "Click",
+            label: "strategy button clicked"
         })
     }
 
-    const clickedLeadership=(e)=>{
+    const clickedLeadership = (e) => {
         console.log("LeadersclickedLeadership clicked")
         setLeadership(true)
         setAll(false)
         setTech(false)
         setStrategy(false)
         trackCustomEvent({
-            category:"Leadership Button",
-            action:"Click",
-            label:"leadership button clicked"
+            category: "Leadership Button",
+            action: "Click",
+            label: "leadership button clicked"
         })
     }
 
@@ -100,32 +103,69 @@ const Project = () => {
     return (
         <div id="project">
             <div className="projectHeader" id="anchorTest">
-                <div className="navButton " onClick={clickedAll} style={(!all) ? null : { width: "90px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>ALL</div>
-                <div className="navButton" onClick={clickedTech} style={(!tech) ? null : { width: "120px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>TECH</div>
-                <div className="navButton" onClick={clickedStrategy} style={(!strategy) ? null : { width: "180px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>STRATEGY</div>
-                <div className="navButton" onClick={clickedLeadership} style={(!leadership) ? null : { width: "220px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px"}}>LEADERSHIP</div>
+                <div className="navButton " onClick={clickedAll} style={(!all) ? null : { width: "90px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px" }}>ALL</div>
+                <div className="navButton" onClick={clickedTech} style={(!tech) ? null : { width: "120px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px" }}>TECH</div>
+                <div className="navButton" onClick={clickedStrategy} style={(!strategy) ? null : { width: "180px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px" }}>STRATEGY</div>
+                <div className="navButton" onClick={clickedLeadership} style={(!leadership) ? null : { width: "220px", background: "rgba(220, 180, 173, 0.7)", border: "3px solid #c77d61", borderRadius: "40px" }}>LEADERSHIP</div>
             </div>
-            {(all || tech|| strategy) && (
+            {(all || tech || strategy) && (
                 <>
-                <div className="lbrown"></div>
-                <div className="purpleCircle"></div>
+                    <div className="lbrown"></div>
+                    <div className="purpleCircle"></div>
                 </>
             )}
             <div className="block">
+
+                {(all || tech || strategy) && (
+                    <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
+                        <a href="https://azure.microsoft.com/en-us/services/kubernetes-service/" target="_blank">
+                            <img className="project-img" src={Aks} alt="Aks Image"></img>
+                            <div className="cream-box">
+                                <div className="title">MICROSOFT - PM INTERN</div>
+                                <div className="description">Lead a project integration from planning to release on Azure Kubernetes Service.</div>
+                            </div>
+                        </a>
+                    </div>
+                )}
+
+                {(all || tech) && (
+                    <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
+                        <a href="https://github.com/KnowledgeCaptureAndDiscovery/ASSET" target="_blank">
+                            <img className="project-img" src={Asset} alt="Asset Image"></img>
+                            <div className="cream-box">
+                                <div className="title">ASSET - CURVE RESEARCH FELLOW</div>
+                                <div className="description">Independently coded features for a sketching interface for scientists, launched v2.0.</div>
+                            </div>
+                        </a>
+                    </div>
+                )}
+
+                {(all || tech) && (
+                    <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
+                        <a href="https://github.com/wangyira/KeepFit/" target="_blank">
+                            <img className="project-img" src={KeepFit} alt="Keepfit Image"></img>
+                            <div className="cream-box">
+                                <div className="title">KEEPFIT - ANDROID GROUP PROJECT</div>
+                                <div className="description">Developed a fitness app that allows user to upload videos, track calories, and plan workouts.</div>
+                            </div>
+                        </a>
+                    </div>
+                )}
+
                 {(all || strategy || leadership) && (
                     <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
                         <a href="https://thehive.ai/" target="_blank">
                             <img className="project-img" src={Hive} alt="Hive Image"></img>
                             <div className="cream-box">
                                 <div className="title">HIVE - CONSULTANT TEAM LEAD</div>
-                                <div className="description">Identify computer vision use cases and conduct 10+ competitor analysis, report to the President</div>
+                                <div className="description">Identified computer vision use cases and did 10+ competitor analysis, report to the President</div>
                             </div>
                         </a>
                     </div>
                 )}
 
-                { (all || tech )&& (
-                    <div className="column" data-aos="fade-up"  data-aos-anchor="#anchorTest">
+                {(all || tech) && (
+                    <div className="column" data-aos="fade-up" data-aos-anchor="#anchorTest">
                         <img className="project-img" src={Cp} alt="Cp Image" ></img>
                         <div className="cream-box">
                             <div className="title">DISCRETE METHODS - COURSE PRODUCER</div>
@@ -145,8 +185,8 @@ const Project = () => {
                         </a>
                     </div>
                 )}
-            
-                { (all || tech )&& (
+
+                {(all || tech) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://krustlet.dev/" target="_blank">
                             <img className="project-img" src={Microsoft} alt="Microsoft Image"></img>
@@ -158,7 +198,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || tech || strategy)&& (
+                {(all || tech || strategy) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://www.dinewithnomi.com/" target="_blank">
                             <img className="project-img" src={Nomi} alt="Nomi Image"></img>
@@ -192,7 +232,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || tech )&& (
+                {(all || tech) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://github.com/wangyira/CSCI201_Music_Party" target="_blank">
                             <img className="project-img" src={MusicParty} alt="MusicParty Image"></img>
@@ -204,7 +244,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || tech )&& (
+                {(all || tech) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://github.com/wangyira/shopping-cart" target="_blank">
                             <img className="project-img" src={ShoppingCart} alt="ShoppingCart Image"></img>
@@ -216,7 +256,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || leadership )&& (
+                {(all || leadership) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://ignite.usc.edu/project/23257" target="_blank">
                             <img className="project-img" src={SWE} alt="SWE Image"></img>
@@ -228,7 +268,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || tech )&& (    
+                {(all || tech) && (
                     <div className="column" data-aos="fade-up">
                         <img className="project-img" src={FounderSecurities} alt="FounderSecurities Image"></img>
                         <div className="cream-box">
@@ -238,7 +278,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || strategy )&& (
+                {(all || strategy) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://givemomentum.com/" target="_blank">
                             <img className="project-img" src={Momentum} alt="Momentum Image"></img>
@@ -250,7 +290,7 @@ const Project = () => {
                     </div>
                 )}
 
-                { (all || leadership )&& (
+                {(all || leadership) && (
                     <div className="column" data-aos="fade-up">
                         <a href="https://viterbischool.usc.edu/news/2020/07/usc-viterbi-engineering-society-raises-money-for-black-lives-matter/" target="_blank">
                             <img className="project-img" src={ThetaTau} alt="ThetaTau Image"></img>
@@ -266,15 +306,15 @@ const Project = () => {
                 <div className="column"></div>
 
             </div>
-            
+
             <div className="contact">
                 Get in touch👋 HMU on Twitter or shoot me an email👉
                 <div className="copyright">Amanda Wang &copy; 2021</div>
             </div>
             <div className="brownShadow"></div>
         </div>
-        
+
     )
-    
+
 }
 export default Project

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import HoverImage from "react-hover-image";
 
 import githubImage from "../images/github.png"
@@ -12,8 +12,8 @@ import emailHover from "../images/emailHover.png"
 import Dragon from "../images/landing.jpg"
 import PinkCreamCircles from "../images/pinkCream.png"
 
-import {OutboundLink} from 'gatsby-plugin-google-analytics'
-import 'aos/dist/aos.css'; 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import 'aos/dist/aos.css';
 
 const Header = () => {
   let AOS;
@@ -27,7 +27,7 @@ const Header = () => {
     const AOS = require("aos");
     AOS.init({
       duration: 1200,
-      once: false, 
+      once: false,
     });
   }, []);
 
@@ -39,16 +39,16 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img className="pink" src={PinkCreamCircles} alt="pink cream circles"/>
-      
+      <img className="pink" src={PinkCreamCircles} alt="pink cream circles" />
+
       <div className="firstname" data-aos="zoom-in">Amanda</div>
       <div className="lastname" data-aos="zoom-in">Wang</div>
-      <img className='dragon' src={Dragon} alt="landing image" data-aos="fade-left"/>
+      <img className='dragon' src={Dragon} alt="landing image" data-aos="fade-left" />
 
       <div className="contact">
-        <OutboundLink href="https://github.com/wangyira" target="_blank"> 
+        <OutboundLink href="https://github.com/wangyira" target="_blank">
           <HoverImage className="icon" src={githubImage} hoverSrc={githubHover} />
-        </OutboundLink> 
+        </OutboundLink>
         <OutboundLink href="https://www.linkedin.com/in/amandawang14/" target="_blank">
           <HoverImage className="icon" src={linkedinImage} hoverSrc={linkedinHover} />
         </OutboundLink>
@@ -58,19 +58,18 @@ const Header = () => {
         <OutboundLink href="mailto:wangyira@usc.edu" target="_blank">
           <HoverImage className="icon" src={emailImage} hoverSrc={emailHover} />
         </OutboundLink>
-        
+
         <div className="line"></div>
-      </div> 
-      
+      </div>
+
       <div className="summary">
         {/* <div className="emoji">👩‍💻📊👥🇨🇳🐼</div> */}
         <br></br>
         <p>Computer Science @USC 22</p>
         <br></br>
         <p>Previously:</p>
-        <p>- Software Engineer & </p>
-        <p>&nbsp; Program Manager @Microsoft Azure</p>
-        <p>- Quant @Founder’s Securities</p>
+        <p>- Program Manager Intern @Microsoft Azure</p>
+        <p>- Product & Engineer @Nomi</p>
       </div>
 
       <div className="orange"></div>
